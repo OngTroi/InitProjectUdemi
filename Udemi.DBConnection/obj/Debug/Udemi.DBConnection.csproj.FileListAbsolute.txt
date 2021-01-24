@@ -1,0 +1,6 @@
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.DBConnection\bin\Debug\Udemi.DBConnection.dll
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.DBConnection\bin\Debug\Udemi.DBConnection.pdb
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.DBConnection\obj\Debug\Udemi.DBConnection.csproj.CoreCompileInputs.cache
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.DBConnection\obj\Debug\Udemi.DBConnection.dll
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.DBConnection\obj\Debug\Udemi.DBConnection.pdb
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.DBConnection\obj\Debug\Udemi.DBConnection.csprojAssemblyReference.cache

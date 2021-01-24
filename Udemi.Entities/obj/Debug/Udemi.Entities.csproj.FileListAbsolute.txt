@@ -1,0 +1,6 @@
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Entities\bin\Debug\Udemi.Entities.dll
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Entities\bin\Debug\Udemi.Entities.pdb
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Entities\obj\Debug\Udemi.Entities.csprojAssemblyReference.cache
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Entities\obj\Debug\Udemi.Entities.csproj.CoreCompileInputs.cache
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Entities\obj\Debug\Udemi.Entities.dll
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Entities\obj\Debug\Udemi.Entities.pdb

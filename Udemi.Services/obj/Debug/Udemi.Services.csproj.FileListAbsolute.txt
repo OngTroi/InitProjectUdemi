@@ -1,0 +1,9 @@
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Services\bin\Debug\Udemi.Services.dll
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Services\bin\Debug\Udemi.Services.pdb
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Services\obj\Debug\Udemi.Services.csprojAssemblyReference.cache
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Services\obj\Debug\Udemi.Services.csproj.CoreCompileInputs.cache
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Services\obj\Debug\Udemi.Services.dll
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Services\obj\Debug\Udemi.Services.pdb
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Services\bin\Debug\Udemi.DBConnection.dll
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Services\bin\Debug\Udemi.DBConnection.pdb
+D:\Study\HCDH\WebT3\Final_Exam\Udemi.Services\obj\Debug\Udemi.Services.csproj.CopyComplete

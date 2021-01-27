@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Udemi.DBConnection.Interfaces;
 using Udemi.DBConnection.Repository;
+using Udemi.Services;
+using Udemi.Services.Interfaces;
+using Udemi.Services.Repository;
 
 namespace Udemi.Services
 {
@@ -52,5 +56,9 @@ namespace Udemi.Services
         }
         #endregion
 
+        public ICourses Courses
+        {
+            get { return new CoursesRepository(new DatabaseService(_connectionString)); }
+        }
     }
 }

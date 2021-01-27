@@ -31,7 +31,7 @@ namespace Udemi.Api
 
         public class Global : HttpApplication
         {
-            public string ConnectionString = ConfigurationManager.ConnectionStrings["connectionString"].ToString(); 
+            public static string ConnectionString = ConfigurationManager.ConnectionStrings["connectionString"].ToString(); 
         }
     }
 }

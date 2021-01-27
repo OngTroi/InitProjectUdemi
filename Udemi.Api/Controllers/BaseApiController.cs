@@ -18,10 +18,11 @@ namespace Udemi.Api.Controllers
         {
             try
             {
-                UnitOfWork = UnitOfWorkFactory.GetUnitOfWork(@"DESKTOP-2EQ0RU5\SQLEXPRESS", "SQL");
+                UnitOfWork = UnitOfWorkFactory.GetUnitOfWork(Global.ConnectionString.ToString(), "SQL");
             }
             catch (Exception ex)
             {
+
             }
             base.Initialize(controllerContext);
         }

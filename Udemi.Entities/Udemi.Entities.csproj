@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,11 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Account\OTP.cs" />
+    <Compile Include="Common\Account\Token.cs" />
+    <Compile Include="Common\Account\User.cs" />
+    <Compile Include="Enum\Enums.cs" />
+    <Compile Include="Function\Bcrypt.cs" />
+    <Compile Include="HttpResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Share_Class.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

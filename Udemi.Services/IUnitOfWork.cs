@@ -16,5 +16,9 @@ namespace Udemi.Services
         #endregion
 
         ICourses Courses { get; }
+
+        IUser User { get; }
+        IToken Token { get; }
+
     }
 }

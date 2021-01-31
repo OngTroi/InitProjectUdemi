@@ -8,6 +8,7 @@ Create Table User_Info
 	Gender INT,
 	DateOfBirth DateTime,
 	Phone VARCHAR(15),
+	IsActive INT,
 	UserType VARCHAR(20)
 	Primary Key(UserEmail)
 )

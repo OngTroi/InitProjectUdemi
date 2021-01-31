@@ -60,5 +60,17 @@ namespace Udemi.Services
         {
             get { return new CoursesRepository(new DatabaseService(_connectionString)); }
         }
+
+        #region Account
+        public IUser User
+        {
+            get { return new UserRepository(new DatabaseService(_connectionString)); }
+        }
+
+        public IToken Token
+        {
+            get { return new TokenRepository(new DatabaseService(_connectionString)); }
+        }
+        #endregion
     }
 }

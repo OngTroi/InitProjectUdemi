@@ -4,10 +4,10 @@ Create Table Token_Manager
 (
 	TokenID NVARCHAR(255),
 	RefreshToken NVARCHAR(255),
-	UserName NVARCHAR(100),
 	Email NVARCHAR(200),
 	CreateDate DateTime Default Current_Timestamp,
-	UpdatedDate DateTime Default Current_Timestamp
-	Primary Key(RefreshToken)
+	UpdatedDate DateTime Default Current_Timestamp,
+	ExpiredTime DateTime
+	Primary Key(Email)
 )
 Go

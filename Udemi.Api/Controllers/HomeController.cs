@@ -10,7 +10,7 @@ namespace Udemi.Api.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Udemi Api";
 
             return View();
         }

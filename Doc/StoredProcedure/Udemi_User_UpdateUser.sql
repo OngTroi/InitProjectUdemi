@@ -48,7 +48,4 @@ Begin
 	Select @ErrorCode err_code, @ErrorMessage err_msg
 	Return
 End
-
 GO
-
-

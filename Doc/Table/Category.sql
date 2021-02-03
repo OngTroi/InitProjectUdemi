@@ -4,7 +4,6 @@ Create Table Category
 (
 	ID INT IDENTITY(1000000,1),
 	Title NVARCHAR(MAX) NOT NULL,
-	Courses_Description NText,
 	CreatedBy NVARCHAR(100),
 	CreatedDate DateTime Default CURRENT_TIMESTAMP,
 	UpdatedBy NVARCHAR(100),

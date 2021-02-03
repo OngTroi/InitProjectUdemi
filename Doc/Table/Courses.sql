@@ -16,6 +16,7 @@ Create Table Courses
 	Outline Ntext,
 	TeacherId Int NOT NULL,
 	CategoryId Int DEFAULT NULL,
+	SubjectTotal INT,
 	CreatedDate Datetime Default Current_Timestamp,
 	CreatedBy Nvarchar(100),
 	UpdatedDate Datetime DEFAULT Current_Timestamp,

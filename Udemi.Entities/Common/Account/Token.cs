@@ -12,5 +12,6 @@ namespace Udemi.Entities.Common.Account
         public string RefreshToken { get; set; }
         public string Email { get; set; }
         public DateTime expiredin { get; set; }
+        public string User_Type { get; set; }
     }
 }

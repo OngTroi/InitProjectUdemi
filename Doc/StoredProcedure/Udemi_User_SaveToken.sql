@@ -7,7 +7,6 @@ GO
 
 SET QUOTED_IDENTIFIER ON
 GO
-
 Create Proc [dbo].[Udemi_User_SaveToken]
 (
 	@Email NVARCHAR(100),
@@ -23,8 +22,10 @@ Begin
 		Delete Token_Manager Where Email = @Email
 		Return
 	END
+	Declare @Type NVARCHAR(20)
+	Select @Type = U.UserType  From User_Info U Where U.UserEmail = @Email
 
-	INSERT INTO Token_Manager(TokenID,Email,ExpiredTime) VALUES (@Token,@Email,@ExpiredDate);
+	INSERT INTO Token_Manager(TokenID,Email,ExpiredTime, User_Type) VALUES (@Token,@Email,@ExpiredDate,@Type);
 	SELECT * From Token_Manager A Where A.Email = @Email;
 	Return;
 End

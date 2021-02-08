@@ -20,7 +20,7 @@ namespace Udemi.Services.Repository
 
         public Token GetToken(string token)
         {
-            string sql = @"Select A.TokenID, A.Email, A.ExpiredTime
+            string sql = @"Select A.TokenID, A.Email, A.ExpiredTime, A.User_Type
                            From Token_Manager A
                            Where A.UserEmail = @Token";
             var dt = ExecuteDataTable(sql, CommandType.Text, new SqlParameter("@Token", token));
@@ -30,7 +30,8 @@ namespace Udemi.Services.Repository
             {
                 Email = dt.Rows[0]["TokenID"].ToString(),
                 TokenId = dt.Rows[0]["Email"].ToString(),
-                expiredin = (DateTime)dt.Rows[0]["ExpiredTime"]
+                expiredin = (DateTime)dt.Rows[0]["ExpiredTime"],
+                User_Type = dt.Rows[0]["User_Type"].ToString()
             };
         }
 

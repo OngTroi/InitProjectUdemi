@@ -38,7 +38,8 @@ namespace Udemi.Api.Controllers.Account
                         {
                             Email = user.Email,
                             TokenId = getToken.Rows[0]["TokenId"].ToString(),
-                            expiredin = (DateTime)(getToken.Rows[0]["ExpiredTime"])
+                            expiredin = (DateTime)(getToken.Rows[0]["ExpiredTime"]),
+                            User_Type = getToken.Rows[0]["User_Type"].ToString()
                         }
                     };
                 }

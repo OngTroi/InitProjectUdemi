@@ -72,7 +72,7 @@ namespace Udemi.Services.Repository
         public DataTable GetCourses()
         {
             string sql = @" Select C.*
-                            From Courses C And ";
+                            From Courses C";
             var dt = ExecuteDataTable(sql, CommandType.Text);
             return dt;
         }

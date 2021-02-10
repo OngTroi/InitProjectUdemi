@@ -23,7 +23,7 @@ namespace Udemi.Services.Interfaces
         /// </summary>
         /// <param name="token"></param>
         /// <returns></returns>
-        bool SaveToken(Token token);
+        DataTable SaveToken(Token token);
 
         /// <summary>
         /// Lấy thông tin token

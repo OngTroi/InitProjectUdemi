@@ -55,6 +55,15 @@ namespace Udemi.Api.Controllers.Account
                 //Lưu Token vào DB
                 var SaveToken = UnitOfWork.Token.SaveToken(token);
                 //Trả kết quả
+                if (SaveToken.Rows.Count == 0)
+                {
+                    return new HttpResult
+                    {
+                        MessageCode = Entities.Enum.Enums.MessageCode.Error,
+                        Message = "Cannot save token."
+                    };
+                }
+                token.User_Type = SaveToken.Rows[0]["User_Type"].ToString();
                 return new HttpResult
                 {
                     MessageCode = Entities.Enum.Enums.MessageCode.Success,

@@ -22,7 +22,7 @@ namespace Udemi.Services.Repository
         {
             string sql = @"Select A.TokenID, A.Email, A.ExpiredTime, A.User_Type
                            From Token_Manager A
-                           Where A.UserEmail = @Token";
+                           Where A.TokenID = @Token";
             var dt = ExecuteDataTable(sql, CommandType.Text, new SqlParameter("@Token", token));
             if (dt.Rows.Count==0)
                 return new Token();
@@ -37,7 +37,7 @@ namespace Udemi.Services.Repository
 
         public DataTable GetTokenByUser(string email)
         {
-            string sql = @"Select A.TokenID, A.Email, A.ExpiredTime
+            string sql = @"Select A.TokenID, A.Email, A.ExpiredTime, A.User_Type
                            From Token_Manager A
                            Where A.Email = @Email";
             var dt = ExecuteDataTable(sql, CommandType.Text, 
@@ -45,7 +45,7 @@ namespace Udemi.Services.Repository
             return dt;
         }
 
-        public bool SaveToken(Token token)
+        public DataTable SaveToken(Token token)
         {
             string sql = @"Udemi_Token_SaveToken";
             var dt = ExecuteDataTable(sql, CommandType.StoredProcedure, 
@@ -53,11 +53,7 @@ namespace Udemi.Services.Repository
                 new SqlParameter("@Token", token.TokenId),
                 new SqlParameter("@ExpiredDate", token.expiredin)
                 );
-            if (dt.Rows.Count == 0)
-            {
-                return false;
-            }
-            return true;
+            return dt;
         }
 
         public bool ValidateToken(string token)

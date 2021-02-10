@@ -7,7 +7,9 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
+using Udemi.Entities.Common.Account;
 using Udemi.Services;
+using static Udemi.Api.WebApiApplication;
 
 namespace Udemi.Api.Attributes
 {
@@ -25,8 +27,8 @@ namespace Udemi.Api.Attributes
 
             var action = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
 
-            var Token = actionContext.Request.Headers.GetValues("Udemi-Token").FirstOrDefault().ToString();
-            if (Token.IsNullOrWhiteSpace())
+            string TokenId = actionContext.Request.Headers.GetValues("Udemi-Token").FirstOrDefault().ToString();
+            if (TokenId.IsNullOrWhiteSpace())
             {
                 var response = new HttpResponseMessage(HttpStatusCode.PreconditionFailed)
                 {
@@ -36,7 +38,8 @@ namespace Udemi.Api.Attributes
                 return;
             }
 
-            var getTk = UnitOfWork.Token.GetToken(Token);
+            UnitOfWork = UnitOfWorkFactory.GetUnitOfWork(Global.ConnectionString.ToString(), "SQL");
+            Token getTk = UnitOfWork.Token.GetToken(TokenId);
             if (getTk.TokenId == null)
             {
                 var response = new HttpResponseMessage(HttpStatusCode.PreconditionFailed)

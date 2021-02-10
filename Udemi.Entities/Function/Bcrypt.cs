@@ -14,8 +14,12 @@ namespace Udemi.Entities.Function
         public static string GenerateHash(string passowrd)
         {
             var hashed = BCrypt.Net.BCrypt.HashPassword(passowrd, workFactor);
-
             return hashed;
+        }
+
+        public static bool ValidatePassword(string password, string correctHash)
+        {
+            return BCrypt.Net.BCrypt.Verify(password, correctHash);
         }
     }
 }

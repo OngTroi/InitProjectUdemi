@@ -21,16 +21,20 @@ namespace Udemi.Services.Repository
 
         public bool CheckInfoUser(User user)
         {
+            //Lấy thông tin user từ DB
             string sql = @"Select A.UserEmail, A.UserPassword
                            From User_Info A
-                           Where A.UserEmail = @Email  And A.UserPassword = @Password And A.IsActive = '1'";
-            var sss = Hashing.GenerateHash(user.Password);
+                           Where A.UserEmail = @Email And A.IsActive = '1'";
             var dt = ExecuteDataTable(sql, CommandType.Text, 
-                    new SqlParameter("@Email", user.Email),
-                    new SqlParameter("@Password",Hashing.GenerateHash(user.Password))
+                    new SqlParameter("@Email", user.Email)
                 );
             if (dt.Rows.Count == 0)
                 return false;
+            //So sánh mật khẩu
+            if (!Hashing.ValidatePassword(user.Password,dt.Rows[0]["UserPassword"].ToString()))
+            {
+                return false;
+            }
             return true;
         }
 
